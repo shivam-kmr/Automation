@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".getotp">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-173dp"
+            android:text="Wait for the code"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/btnSignIn" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp" />
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:digits="0123456789"
+            android:drawablePadding="10dp"
+            android:background="@android:color/transparent"
+            android:textAlignment="center"
+            android:hint="Enter OTP"
+            android:inputType="phone"
+            android:textSize="25dp"
+            android:maxLength="10" />
+
+        <com.spark.submitbutton.SubmitButton
+            android:id="@+id/buttonSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editTextCode"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            android:textColor="@color/gray"
+            app:sub_btn_background="@color/white"
+            app:sub_btn_duration="3000"
+            app:sub_btn_line_color="@color/btnSignIn"
+            app:sub_btn_ripple_color="@color/btnSignIn"
+            app:sub_btn_tick_color="@color/white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
